@@ -1,0 +1,47 @@
+# Built artifacts
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+build/
+.cxx/
+.externalNativeBuild/
+
+# Gradle
+.gradle/
+local.properties
+captures/
+.navigation/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+.DS_Store
+
+# Keystores / secrets
+*.jks
+*.keystore
+keystore.properties
+google-services.json
+app/google-services.json
+
+# Firebase / Node
+.firebase/
+functions/node_modules/
+**/node_modules/
+
+# Windows ADS junk
+*:Zone.Identifier
+
+# Native / misc
+*.log
+*.hprof
+.kotlin/

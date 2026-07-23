@@ -1,0 +1,30 @@
+services:
+  # One-time / occasional: generate Gradle wrapper files into the repo.
+  wrapper:
+    image: gradle:8.11.1-jdk17
+    working_dir: /project
+    volumes:
+      - ./:/project
+    command: ["gradle", "wrapper", "--gradle-version", "8.11.1"]
+
+  # Build APKs. Example: docker compose run --rm build
+  # Or: docker compose run --rm build assembleRelease
+  build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /project
+    volumes:
+      - ./:/project
+      - gradle-cache:/home/android/.gradle
+      - gradle-cache-root:/root/.gradle
+      # Reuse the host debug keystore so the APK signature (SHA-1) stays stable.
+      - ~/.android:/root/.android
+    environment:
+      GRADLE_USER_HOME: /root/.gradle
+      # Optional: pass -PGOOGLE_WEB_CLIENT_ID=.... via compose override / .env
+      GOOGLE_WEB_CLIENT_ID: ${GOOGLE_WEB_CLIENT_ID:-}
+
+volumes:
+  gradle-cache:
+  gradle-cache-root:

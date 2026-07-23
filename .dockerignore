@@ -1,0 +1,15 @@
+.git
+.gradle
+**/build
+**/.cxx
+*.apk
+*.aab
+.idea
+.vscode
+local.properties
+app/google-services.json
+README
+*.md
+!README.md
+docs
+agent-transcripts

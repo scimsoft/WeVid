@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Map pin -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,28 C43.9,28 35.8,36.1 35.8,46.2 C35.8,59.9 54,80 54,80 C54,80 72.2,59.9 72.2,46.2 C72.2,36.1 64.1,28 54,28z" />
+    <!-- Circle window in the pin head -->
+    <path
+        android:fillColor="#1E8A4C"
+        android:pathData="M54,46.2m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0" />
+    <!-- Play triangle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50.8,41.2l9,5 -9,5z" />
+</vector>
